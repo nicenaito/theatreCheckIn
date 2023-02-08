@@ -1,0 +1,8 @@
+<form action="{% url 'theatreCheckIn:register_confirm' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="チェックイン">
+</form>
+<form action="{% url 'theatreCheckIn:index' %}" method="GET">
+    <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
+</form>

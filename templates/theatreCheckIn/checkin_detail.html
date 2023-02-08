@@ -1,0 +1,33 @@
+<html>
+
+<body>
+    {% if object  %}
+    <ul>
+        
+        <table>
+            <tr>
+                <th>鑑賞日時</th>
+                <th>映画タイトル</th>
+                <th>公開日</th> 
+                <th>劇場名</th>
+            </tr>
+            <tr>
+                <td>{{ object.checkin_datetime }}</td>
+                <td>{{ object.movie_title }}</td>
+                <td>{{ object.pub_date }}</td>
+                <td>{{ object.theatre }}</td>
+            </tr>
+        </table>
+        
+    </ul>
+    {% else %}
+    <p>チェックイン履歴はありません。</p>
+    {% endif %}
+
+    
+    <form action="{% url 'theatreCheckIn:index' %}" method="GET">
+        <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
+    </form>
+</body>
+
+</html>

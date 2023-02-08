@@ -1,0 +1,541 @@
+{
+   "html_attributions" : [],
+   "results" : [
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6901521,
+               "lng" : 139.7058925
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.6913472302915,
+                  "lng" : 139.7070884802915
+               },
+               "southwest" : {
+                  "lat" : 35.6886492697085,
+                  "lng" : 139.7043905197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "新宿バルト９",
+         "photos" : [
+            {
+               "height" : 3000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116581017121736727748\"\u003eHiddenhowrun\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgM86tzNzfn6SYlV5_HYPxHizrdp5C2pMtBkAc1C8UxzCPCr4advYuhbk97WZjIqOZx-TfrWt31Z8mm2zB5nafK-zyGpN9aoLM3w7rTxGiSmBtxMad_EOzhk_7OzJh8k9VhBKebvoPrIbUFXeVKd4dwGlrCXLOIrAsnjdYw2jcYIKV8B",
+               "width" : 4000
+            }
+         ],
+         "place_id" : "ChIJSZWNWtuMGGARreT4_9UTBzg",
+         "plus_code" : {
+            "compound_code" : "MPR4+39 日本、東京都新宿区",
+            "global_code" : "8Q7XMPR4+39"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJSZWNWtuMGGARreT4_9UTBzg",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 5120,
+         "vicinity" : "新宿区新宿３丁目１−２６ 三丁目イーストビル 9階"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6911087,
+               "lng" : 139.7021027
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.6925594802915,
+                  "lng" : 139.7033541302915
+               },
+               "southwest" : {
+                  "lat" : 35.6898615197085,
+                  "lng" : 139.7006561697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "新宿武蔵野館",
+         "photos" : [
+            {
+               "height" : 3533,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109173544531166098180\"\u003eRANA. K\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgOkJF339m9LEx37jsVqppgllsbQgcxAy_F6nLFhA2kvXxHNtQI9dYw5E8uyaBU3giAnHg-uOniIXUSNRYFB4OAsNwIQERpYFvFaZNKTt1S8PqEzTS-kAAdnL0dd6JZ5ncGrO6Mhv5eieXXbSrdE8QtC8tVv0AfsZzAvbX_xN32BOzhN",
+               "width" : 2649
+            }
+         ],
+         "place_id" : "ChIJnbKibdqMGGARNaUhuYJ566A",
+         "plus_code" : {
+            "compound_code" : "MPR2+CR 日本、東京都新宿区",
+            "global_code" : "8Q7XMPR2+CR"
+         },
+         "rating" : 4,
+         "reference" : "ChIJnbKibdqMGGARNaUhuYJ566A",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1302,
+         "vicinity" : "新宿区新宿３丁目２７−１０ 武蔵野ビル 3階"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6900956,
+               "lng" : 139.7027731
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.69145273029149,
+                  "lng" : 139.7040785802915
+               },
+               "southwest" : {
+                  "lat" : 35.6887547697085,
+                  "lng" : 139.7013806197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "K's cinema",
+         "photos" : [
+            {
+               "height" : 3000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116581017121736727748\"\u003eHiddenhowrun\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgMiCOHnWpLyEtcfaYUPvJ9DIolXt2ykeYu02fKaJ7uim8vNfEho965u3MD_jHzhQVHG7OETRHvCSnCY--4bwx--cgsJsBOcaANRw0znAKXf9Fgl1OOm4uYTJQHy_Ih3rAvNJnWgSYs1X6mkf8m0i9Dy3UP8y0meOjeDojyprsCFK1oM",
+               "width" : 4000
+            }
+         ],
+         "place_id" : "ChIJlXl289qMGGAR_Qn5LRRnwm8",
+         "plus_code" : {
+            "compound_code" : "MPR3+24 日本、東京都新宿区",
+            "global_code" : "8Q7XMPR3+24"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJlXl289qMGGAR_Qn5LRRnwm8",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 469,
+         "vicinity" : "新宿区新宿３丁目３５−１３ ３F ＳＨＯＷＡＫＡＮビル"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6903718,
+               "lng" : 139.7014896
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.6917384302915,
+                  "lng" : 139.7028802302915
+               },
+               "southwest" : {
+                  "lat" : 35.6890404697085,
+                  "lng" : 139.7001822697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "新宿シネマカリテ",
+         "photos" : [
+            {
+               "height" : 2736,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/108059959038091098816\"\u003eHiroshi Koizümi\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgO75op2p32F3Vyo7_JqutLxIm6jSDO4062zJcZQxpXDBKNJjBD_xnRJZ9Fi_N_X4b-s9w3JrvsnzAfJrRPzcvpYtNsjAqV9rMXOt-vqmlP5ZFJD3pQm_UIimCnVR0FmMF98HXbJ-E4a0OKXN6voRLM1Uew7niQtBbtxjDgei4CRGC6L",
+               "width" : 3648
+            }
+         ],
+         "place_id" : "ChIJV5-sgtCMGGAR4xoYafwduR0",
+         "plus_code" : {
+            "compound_code" : "MPR2+4H 日本、東京都新宿区",
+            "global_code" : "8Q7XMPR2+4H"
+         },
+         "rating" : 4,
+         "reference" : "ChIJV5-sgtCMGGAR4xoYafwduR0",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 744,
+         "vicinity" : "新宿区新宿３丁目３７−１２ 新宿ＮＯＷＡ Ｂ１Ｆ"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6922468,
+               "lng" : 139.7052221
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.6937023802915,
+                  "lng" : 139.7065168302915
+               },
+               "southwest" : {
+                  "lat" : 35.69100441970851,
+                  "lng" : 139.7038188697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "テアトル新宿",
+         "photos" : [
+            {
+               "height" : 2448,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/109102655071811978472\"\u003eSSM UEDA (SSM)\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgPA3LN2ll_4JJEYF-g_NDhewC9K8wobj1-a7syClYvwGHBzZAzixYVosDRs0IS-2uoaB65SmkfcPa9-QpLodtlE3yj_PDLiiYJbMMmovhlqzerOXrwNCgqU-W3PqvB6_9CFJ4UjWxUhV6du3t3hy8yY2p4ACsQruzFj9DhOzHIZdZ34",
+               "width" : 3264
+            }
+         ],
+         "place_id" : "ChIJJZ39lduMGGARfWqY3-nupT0",
+         "plus_code" : {
+            "compound_code" : "MPR4+V3 日本、東京都新宿区",
+            "global_code" : "8Q7XMPR4+V3"
+         },
+         "rating" : 4,
+         "reference" : "ChIJJZ39lduMGGARfWqY3-nupT0",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 844,
+         "vicinity" : "新宿区新宿３丁目１４−２０ 新宿テアトルビル B1"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.691917,
+               "lng" : 139.705716
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.6931998802915,
+                  "lng" : 139.7070010802915
+               },
+               "southwest" : {
+                  "lat" : 35.6905019197085,
+                  "lng" : 139.7043031197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "シネマート新宿",
+         "photos" : [
+            {
+               "height" : 3840,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/118252634782609753961\"\u003e奈塚Q弥\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgMtcuPUN5PJlJR0-FqEGLDq7ap7qoFClTaeNY4eFfAW_UenR6868YOB0GA7NPvrrbTNfBvcPxKSvBkcQfm4gBB2l_wUPIOeZ64biXVZ60DQuCbdtwOAhRvQVlP98KphGmvfmZ4sH96_e2euhzkblS0JBaOjUiVviK2MnewlllAuRGaU",
+               "width" : 2160
+            }
+         ],
+         "place_id" : "ChIJibinnNuMGGAR1VELiXSUKK4",
+         "plus_code" : {
+            "compound_code" : "MPR4+Q7 日本、東京都新宿区",
+            "global_code" : "8Q7XMPR4+Q7"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJibinnNuMGGAR1VELiXSUKK4",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1177,
+         "vicinity" : "新宿区新宿３丁目１３−３ 6Ｆ・7Ｆ Shinjuku Bunka Bldg"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.69541529999999,
+               "lng" : 139.7020545
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.69647778029149,
+                  "lng" : 139.7033855802915
+               },
+               "southwest" : {
+                  "lat" : 35.6937798197085,
+                  "lng" : 139.7006876197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "TOHOシネマズ 新宿",
+         "photos" : [
+            {
+               "height" : 4032,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/107282814869824341881\"\u003eMasato O\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgOrwZXgKBzx7SCQo30A8MdiXnnZgU_jTeiVpFhg-jWGNLOMvk9sCVs7AzJDiL3G67LB-A8HBitH7S08nEOIJURrfpaMvDrWPNiJZ-5vIW4rWBfg1J-gzbM74UtYs83YUVS1j1OkJzyw2Ve945Qzo0NUzwzLBHANwbCNklnbIGYsgy91",
+               "width" : 3024
+            }
+         ],
+         "place_id" : "ChIJ__JMK9iMGGAR6P_7QHoOGE4",
+         "plus_code" : {
+            "compound_code" : "MPW2+5R 日本、東京都新宿区",
+            "global_code" : "8Q7XMPW2+5R"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJ__JMK9iMGGAR6P_7QHoOGE4",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 7955,
+         "vicinity" : "新宿区歌舞伎町１丁目１９−１ 新宿東宝ビル ３階"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6927335,
+               "lng" : 139.7037524
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.69415738029149,
+                  "lng" : 139.7051069802915
+               },
+               "southwest" : {
+                  "lat" : 35.69145941970849,
+                  "lng" : 139.7024090197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "新宿ピカデリー",
+         "photos" : [
+            {
+               "height" : 3332,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116925249199431560435\"\u003ekatsumo\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgOVpmA8tnEPqif6o9dPHQjKAmqw25Y6Ke6nkeU3VGemcYTbU4VUGaHdtuA5sJ-ZIKkKhwZf9SolLdnf_9fKgPZT_vfLdTpI5MIhq9ByeFfiY681LNxIeb1vPhkzeGISB6KdtNvLynA3GRNOfe-1OAk2Hw1XOH3ftuEtnh_SfzaEKl2Q",
+               "width" : 2499
+            }
+         ],
+         "place_id" : "ChIJ_bu8a8WMGGARpvHpKekKwL0",
+         "plus_code" : {
+            "compound_code" : "MPV3+3G 日本、東京都新宿区",
+            "global_code" : "8Q7XMPV3+3G"
+         },
+         "rating" : 4,
+         "reference" : "ChIJ_bu8a8WMGGARpvHpKekKwL0",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 6745,
+         "vicinity" : "新宿区新宿３丁目１５−１５ 新宿ピカデリ"
+      },
+      {
+         "business_status" : "CLOSED_TEMPORARILY",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6892039,
+               "lng" : 139.699147
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.69059703029149,
+                  "lng" : 139.7004435802915
+               },
+               "southwest" : {
+                  "lat" : 35.6878990697085,
+                  "lng" : 139.6977456197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+         "icon_background_color" : "#FF9E67",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+         "name" : "新宿BBQ ビアガーデン HELLO",
+         "permanently_closed" : true,
+         "photos" : [
+            {
+               "height" : 1365,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/112761773109941004846\"\u003e新宿BBQ ビアガーデン HELLO\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgMjECMM0HEAUnxIrokUduVyrMFgS04wj93FsDAw_SjuO-991_jFuy2AFM61UtrTftTWGhp3dCNYqOjPNzk-MzP4lfPcwtW5MvxjPI0jr1uzX9GfWQyMiWnr8Zq22gHrbkztmh86Cd9EHo1othCeJt8tQFRA2J-yZjXIGQXycIJn2oA1",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJgYK364yNGGARaasU4pSTNFU",
+         "plus_code" : {
+            "compound_code" : "MMQX+MM 日本、東京都新宿区",
+            "global_code" : "8Q7XMMQX+MM"
+         },
+         "rating" : 3.4,
+         "reference" : "ChIJgYK364yNGGARaasU4pSTNFU",
+         "scope" : "GOOGLE",
+         "types" : [
+            "bar",
+            "movie_theater",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total" : 44,
+         "vicinity" : "新宿区西新宿１丁目１−５ エルテラス ルミネ1-RF"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6886342,
+               "lng" : 139.7036224
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.69002798029149,
+                  "lng" : 139.7048719802915
+               },
+               "southwest" : {
+                  "lat" : 35.6873300197085,
+                  "lng" : 139.7021740197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+         "icon_background_color" : "#7B9EB0",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+         "name" : "㈱アブラプロ 東京音響PA受付センター",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3648,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100346248239467979931\"\u003e㈱アブラプロ 東京音響PA受付センター\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgMfThzz8ZKI2GROXfRbAsqRWvzKwqpwxCdBDAFXFENG-Hevk5kMmFWEsXj7tqAaFTiFgFuGC3mCYI3GrP0OcgsLF2OGYn-5tp1JBZftq7N1wZx7lS5ql81t7R8_U-KIMbRqSqLmteH7IIEOs95_sSMVwjcWpnR5ejrcv2KFniLKiSCt",
+               "width" : 5472
+            }
+         ],
+         "place_id" : "ChIJN4Qft8mLGGARrNLKXOWD6C4",
+         "plus_code" : {
+            "compound_code" : "MPQ3+FC 日本、東京都新宿区",
+            "global_code" : "8Q7XMPQ3+FC"
+         },
+         "rating" : 5,
+         "reference" : "ChIJN4Qft8mLGGARrNLKXOWD6C4",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1,
+         "vicinity" : "新宿区新宿４丁目３−１５ レイフラット新宿 B棟"
+      },
+      {
+         "business_status" : "CLOSED_TEMPORARILY",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6958567,
+               "lng" : 139.7006107
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.6972263802915,
+                  "lng" : 139.7017599302915
+               },
+               "southwest" : {
+                  "lat" : 35.6945284197085,
+                  "lng" : 139.6990619697085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "１０９シネマズプレミアム新宿",
+         "permanently_closed" : true,
+         "place_id" : "ChIJZSs4L3iNGGARV4DrFMlQSwA",
+         "plus_code" : {
+            "compound_code" : "MPW2+86 日本、東京都新宿区",
+            "global_code" : "8Q7XMPW2+86"
+         },
+         "reference" : "ChIJZSs4L3iNGGARV4DrFMlQSwA",
+         "scope" : "GOOGLE",
+         "types" : [ "movie_theater", "point_of_interest", "establishment" ],
+         "vicinity" : "新宿区歌舞伎町１丁目２９−１"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 35.6918655,
+               "lng" : 139.7057766
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 35.6931741302915,
+                  "lng" : 139.7070313802915
+               },
+               "southwest" : {
+                  "lat" : 35.6904761697085,
+                  "lng" : 139.7043334197085
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/movies-71.png",
+         "icon_background_color" : "#13B5C7",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/movie_pinlet",
+         "name" : "EJアニメシアター新宿",
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111861254070039752876\"\u003eY O\u003c/a\u003e"
+               ],
+               "photo_reference" : "AfLeUgMBkaRv4dC1unWzGOURo_-R21MDG6u3hzRSFo6cG4xz2FPWNu0B3a90enOAEPMtwSoNJ2aD_38uZuUTbxroTFTWo27QKAd_kVQspdMgK6Rr0fbAUr5hdQIgEXwP1LrBl7Qao2ynr2UdOEB1u4SAS5sUhwBNMU-JHAeCLzCD0CPQIHZF",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJAQCwnNuMGGARXoMRb2GkkBA",
+         "plus_code" : {
+            "compound_code" : "MPR4+P8 日本、東京都新宿区",
+            "global_code" : "8Q7XMPR4+P8"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJAQCwnNuMGGARXoMRb2GkkBA",
+         "scope" : "GOOGLE",
+         "types" : [
+            "movie_theater",
+            "cafe",
+            "food",
+            "point_of_interest",
+            "store",
+            "establishment"
+         ],
+         "user_ratings_total" : 873,
+         "vicinity" : "新宿区新宿３丁目１３−３ 新宿文化ビル 4・5階 Shinjuku Bunka Bldg 5F"
+      }
+   ],
+   "status" : "OK"
+}

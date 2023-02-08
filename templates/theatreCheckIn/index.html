@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="ja">
+    <meta name="author" content="作者">
+    <meta name="copyright" content="著作権、コピーライト">
+    <meta name="keywords" content="検索エンジンキーワード1,検索エンジンキーワード2">
+    <meta name="description" content="このページの簡単な説明">
+    <title>映画館チェックインサービス</title>
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <a>ログインユーザ：{{ user.get_username }}</a>
+    {% endif %}
+
+    <li>
+        <a class="nav-link" href="{% url 'theatreCheckIn:register' %}">
+            <i class="fa fa-fw fa-sign-out"></i>チェックイン</a>
+    </li>
+    <li>
+        <a class="nav-link" href="{% url 'theatreCheckIn:checkin_list' %}">
+            <i class="fa fa-fw fa-sign-out"></i>チェックイン履歴</a>
+    </li>
+    <BR>
+    <BR>
+
+    <li>
+        <a class="nav-link" href="{% url 'accounts:logout' %}">
+            <i class="fa fa-fw fa-sign-out"></i>ログアウト</a>
+    </li>
+
+</body>
+
+</html>

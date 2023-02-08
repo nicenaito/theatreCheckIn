@@ -1,0 +1,378 @@
+{
+    "dates": {
+        "maximum": "2023-02-08",
+        "minimum": "2022-12-22"
+    },
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/1DBDwevWS8OhiT3wqqlW7KGPd6m.jpg",
+            "genre_ids": [
+                53
+            ],
+            "id": 985939,
+            "original_language": "en",
+            "original_title": "Fall",
+            "overview": "親友のベッキーとハンターにとって、人生とは恐怖を克服し、限界に挑戦することです。 しかし、人里離れた廃墟となった電波塔の頂上まで 2,000 フィート登った後、彼らは降りることができず立ち往生していることに気づきます。 今、ベッキーとハンターの熟練したクライミング スキルが究極の試練にさらされます。彼らは要素、物資の不足、めまいを誘発する高さを生き残るために必死に戦います。",
+            "popularity": 527.31,
+            "poster_path": "/gQeHKnVQvX0W0rXT42aNKogJsG4.jpg",
+            "release_date": "2023-02-03",
+            "title": "FALL／フォール",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 2369
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/i6zyJ18xvVvqbN6eUdzgSwlhb8h.jpg",
+            "genre_ids": [
+                9648,
+                80,
+                27
+            ],
+            "id": 800815,
+            "original_language": "en",
+            "original_title": "The Pale Blue Eye",
+            "overview": "1830年の冬のある日。アメリカ・ニューヨーク州のウエストポイント陸軍士官学校で、心臓をくり抜かれた士官候補生の死体が発見される。学校の評判が悪くなることを恐れた幹部たちは、引退していた元刑事オーガスタス・ランドー(クリスチャン・ベイル)に内密に捜査を依頼する。調査を開始した彼は、風変わりな士官候補生エドガー・アラン・ポー(ハリー・メリング)に協力を求め、二人で事件の真相を追う。",
+            "popularity": 381.544,
+            "poster_path": "/p9P31CNYkkoNewCHEAaoH3IYTZF.jpg",
+            "release_date": "2022-12-23",
+            "title": "ほの蒼き瞳",
+            "video": false,
+            "vote_average": 7,
+            "vote_count": 924
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/1vXD5HXqkhvsXFHE7KmCPZGPR1e.jpg",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "id": 674324,
+            "original_language": "en",
+            "original_title": "The Banshees of Inisherin",
+            "overview": "本土が内戦に揺れる1923年、アイルランドの孤島・イニシェリン島。島民全員が知り合いである平和な島で、パードリック(コリン・ファレル)は長年の友人であるはずのコルム(ブレンダン・グリーソン)から突然絶縁されてしまう。理由も分からず動揺を隠せないパードリックは、妹のシボーンや隣人ドミニクの助けも借りて何とかしようとするも、コルムから「これ以上自分に関わると自分の指を切り落とす」と言い渡される。やがて島には、死を知らせると伝承される精霊が降り立つ。",
+            "popularity": 162.375,
+            "poster_path": "/hrBDy5FoGxK3kzIypqfn8Gnq6oY.jpg",
+            "release_date": "2023-01-27",
+            "title": "イニシェリン島の精霊",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 755
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fI8hv1IqWUIUjx4YRfl6TWhdqHW.jpg",
+            "genre_ids": [
+                28,
+                18,
+                9648,
+                53
+            ],
+            "id": 626872,
+            "original_language": "ko",
+            "original_title": "비상선언",
+            "overview": "娘とハワイに向かう飛行機恐怖症のジェイ・ヒョク(イ・ビョンホン)は、空港で自分たちにつきまとっていた若い男性(イム・シワン)が、同じ便に乗っていることに不安を覚える。飛行機が離陸して間もなく乗客の男性が死亡したことをきっかけに、乗客たちが次々と命を落としていく。一方、妻とのハワイ旅行をキャンセルした刑事のク・イノ(ソン・ガンホ)は、妻が乗った飛行機がバイオテロの標的になったことを知る。",
+            "popularity": 90.245,
+            "poster_path": "/ev640QkU10sSuRGuIIvEnQl0b8q.jpg",
+            "release_date": "2023-01-06",
+            "title": "非常宣言",
+            "video": false,
+            "vote_average": 7.9,
+            "vote_count": 160
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                28,
+                16,
+                14
+            ],
+            "id": 1067282,
+            "original_language": "ja",
+            "original_title": "「鬼滅の刃」上弦集結、そして刀鍛冶の里へ",
+            "overview": "",
+            "popularity": 135.36,
+            "poster_path": "/67J34Qgpm6f9bEjqNGHtWgr2kM0.jpg",
+            "release_date": "2023-02-03",
+            "title": "「鬼滅の刃」上弦集結、そして刀鍛冶の里へ",
+            "video": false,
+            "vote_average": 1,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/juSUYWiLmic0juql4q20uSTlJW7.jpg",
+            "genre_ids": [
+                28,
+                878,
+                12,
+                18
+            ],
+            "id": 1002780,
+            "original_language": "ja",
+            "original_title": "仮面ライダーギーツ×リバイス MOVIEバトルロワイヤル",
+            "overview": "",
+            "popularity": 15.877,
+            "poster_path": "/hsYetJZ8V9FDr7pyW6ep9mVE7F.jpg",
+            "release_date": "2022-12-23",
+            "title": "仮面ライダーギーツ×リバイス MOVIEバトルロワイヤル",
+            "video": false,
+            "vote_average": 7,
+            "vote_count": 2
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/pOee0WfMHRB8VvUnmZ9xhXzW2pF.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 821494,
+            "original_language": "gu",
+            "original_title": "છેલ્લો શો",
+            "overview": "",
+            "popularity": 12.14,
+            "poster_path": "/9mubnsBmCneHjq6MvdbwADJxbdd.jpg",
+            "release_date": "2023-01-20",
+            "title": "エンドロールのつづき",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 14
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/u0pa6KFufYypPhN0BMqfFxRwbU8.jpg",
+            "genre_ids": [],
+            "id": 1069166,
+            "original_language": "ja",
+            "original_title": "SCROLL",
+            "overview": "学生時代に友だちだった〈僕〉とユウスケのもとに、友人の森が自殺したという報せが届く。就職はしたものの上司からすべてを否定され、「この社会で夢など見てはいけない」とSNSに想いをアップすることで何とか自分を保っていた〈僕〉と、毎日が楽しければそれでいいと刹那的に生きてきたユウスケ。森の死をきっかけに“生きること・愛すること”を見つめ直す二人に、〈僕〉の書き込みに共鳴し特別な自分になりたい願う〈私〉と、ユウスケとの結婚がからっぽな心を満たしてくれると信じる菜穂の時間が交錯していく。青春の出口に立った4人が見つけた、きらめく明日への入口とは──？何者にもなれない4人が、ひとつの死をきっかけに、明日への一歩を踏み出す。私たちが目にするのは、4人の中にきらめく、私たち自身の欠片。痛みを知る者にしか見えない光を描く、絶望を抱きしめる希望の物語。",
+            "popularity": 25.278,
+            "poster_path": "/7KkeiF2L9nA4acDiPFiAMc6rlvx.jpg",
+            "release_date": "2023-02-03",
+            "title": "SCROLL",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 1035647,
+            "original_language": "ja",
+            "original_title": "生きててごめんなさい",
+            "overview": "出版社の編集部で働く園田修一は、清川莉奈と同棲生活をしている。修一は小説家になるという夢を抱いていたが、諦めかけていた。莉奈は何をやっても上手くいかず、いくつもアルバイトをクビになり、家で独り過ごすことが多かった。ある日、修一は高校の先輩で大手出版社の編集者・相澤今日子と再会し、相澤の務める出版社の新人賞にエントリーすることに。",
+            "popularity": 23.208,
+            "poster_path": "/z19sJHervKwMxxUGngxwSSJCBbN.jpg",
+            "release_date": "2023-02-03",
+            "title": "生きててごめんなさい",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 916314,
+            "original_language": "ja",
+            "original_title": "浮かぶ",
+            "overview": "高校卒業を控えた春。  町に残る最後の林が伐採されることになったことをきっかけに、主人公の結衣は林にまつわる、ある天狗伝説に触れる。  結衣は、年子の妹である佳世が１１年前に天狗による神隠しにあっていることを知ると、次第に自らの中で当時の記憶がよみがえる。  「あの日、佳世の隣には私もいたのに、自分は選んでもらえなかった」  “選ばれる”ということの意味について、天狗の神隠しから11年後の町に住む姉妹と彼女たちを見守る少年の物語。",
+            "popularity": 22.294,
+            "poster_path": "/oRPo30vJwiKvrvB4NpbYbh740aU.jpg",
+            "release_date": "2023-02-03",
+            "title": "浮かぶ",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wkaKu3gwAcw3n1mqfFmwNfPGasX.jpg",
+            "genre_ids": [
+                35,
+                18
+            ],
+            "id": 603206,
+            "original_language": "en",
+            "original_title": "Dream Horse",
+            "overview": "イギリス、ウェールズ。谷間にある小さな村で夫と二人で暮らす主婦ジャンは、パートと親の介護をするだけの日々を送っていた。あるとき、彼女は馬主だった経験のあるハワードの話に感化されて競走馬を育成しようと思い立ち、村の住民たちに共同馬主になろうと誘う。ジャンたちは週10ポンドずつ出し合い、ドリームアライアンス(夢の同盟)と名付けた組合馬主になる。ドリームアライアンスはレースを勝ち進み、それとともにジャンらの人生も変わっていく。",
+            "popularity": 9.555,
+            "poster_path": "/ngYvgjhl7iJ4He7juW18ysYSZQD.jpg",
+            "release_date": "2023-01-06",
+            "title": "ドリーム・ホース",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 89
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 1067610,
+            "original_language": "ja",
+            "original_title": "ジャガービート",
+            "overview": "",
+            "popularity": 20.924,
+            "poster_path": "/xPkRzvBpdxX6SfU7BfDEpH5edgV.jpg",
+            "release_date": "2023-02-03",
+            "title": "ジャガービート",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 1075373,
+            "original_language": "ja",
+            "original_title": "君に幸あれよ",
+            "overview": "",
+            "popularity": 18.091,
+            "poster_path": "/nXZPQG1SLhJe8APqmzHFhfvL8vg.jpg",
+            "release_date": "2023-02-04",
+            "title": "君に幸あれよ",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/p2Xf1fMDtVDojAwEDBX3We33Axv.jpg",
+            "genre_ids": [
+                36,
+                18,
+                10749
+            ],
+            "id": 990365,
+            "original_language": "ja",
+            "original_title": "THE LEGEND & BUTTERFLY",
+            "overview": "尾張の織田信長は、格好ばかりで「大うつけ」と呼ばれていた。この男の元に嫁いできたのは、「マムシの娘」と呼ばれる男勝りの美濃の濃姫だった。権威を振りかざし尊大な態度で濃姫を迎える信長と、臆さぬ物言いで信長に対抗する濃姫。敵対する隣国同士の政略結婚という最悪の出会いを果たした二人は、性格も真逆で、お互いを出し抜いて寝首をかこうと一触即発状態、まるで水と油のような関係だった。 そんなある時、強敵・今川義元の大軍が攻めて来る。圧倒的戦力差を前に絶望しかけた信長であったが、彼を奮い立たせたのは、濃姫の言葉であった。二人はともに戦術を練り、激論の末に奇跡的勝利を収める。真っ向から対立していた二人はこの日から次第に強い絆で結ばれ、やがて誰も成し遂げたことのない天下統一へと向かっていくのであった──。",
+            "popularity": 7.834,
+            "poster_path": "/sq3Ntm8Y2ozLg4oHQnNfRZ9vYdW.jpg",
+            "release_date": "2023-01-27",
+            "title": "レジェンド＆バタフライ",
+            "video": false,
+            "vote_average": 8,
+            "vote_count": 1
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 1077039,
+            "original_language": "ja",
+            "original_title": "茶飲友達",
+            "overview": "",
+            "popularity": 15.705,
+            "poster_path": "/sBHhvmQOicUFuJIBOR95QcSBkLB.jpg",
+            "release_date": "2023-02-04",
+            "title": "茶飲友達",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/eLYJu0JY7uAu0XeltM5OL3fdPDn.jpg",
+            "genre_ids": [
+                18,
+                36,
+                10770
+            ],
+            "id": 910365,
+            "original_language": "de",
+            "original_title": "Die Wannseekonferenz",
+            "overview": "1942年1月20日。国家保安部代表のラインハルト・ハイドリヒは、ナチス親衛隊と政府高官ら15名を、ドイツ・ベルリンのヴァンゼー湖のほとりにある邸宅に招集する。「ユダヤ人問題の最終的解決」についての会議が開かれ、彼らはヨーロッパの全てのユダヤ人を抹殺する計画について話し合う。会議ではユダヤ人の移送、強制収容、強制労働、計画的殺害などが異論なく議決される。",
+            "popularity": 14.371,
+            "poster_path": "/c3gdCiz3MiKhTvg9fpAcAg0B37E.jpg",
+            "release_date": "2023-01-20",
+            "title": "ヒトラーのための虐殺会議",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 13
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hcmL6C3SN6jHleaVRp0iMCR42aI.jpg",
+            "genre_ids": [
+                16,
+                18
+            ],
+            "id": 991190,
+            "original_language": "ja",
+            "original_title": "金の国 水の国",
+            "overview": "敵対する2つの国。 決して出会うはずがなかった、 おっとり王女サーラとお調子者の建築士ナランバヤル。  国の未来のため、 突如“夫婦役”を演じることになってしまった2人は  自分でも気づかぬうちに、恋に落ちてしまう。  国をも動かす2人の恋、 その先にある、誰も見たことのない奇跡とはーー?",
+            "popularity": 6.629,
+            "poster_path": "/r6sD5zjb2TJnXeN0j8jzrKBejJt.jpg",
+            "release_date": "2023-01-27",
+            "title": "金の国 水の国",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                99
+            ],
+            "id": 1058817,
+            "original_language": "ja",
+            "original_title": "『ミスタームーンライト』〜1966 ザ・ビートルズ武道館公演 みんなで見た夢〜",
+            "overview": "1962年にレコードデビューし、多くの人を魅了してきたロックバンド、ザ・ビートルズ。およそ8年の活動期間ながら世界中を熱中させ、後のロックシーンに絶大な影響を与えた彼らは、1966年に来日し日本武道館で5回の公演を行った。その伝説的公演の舞台裏で奔走した人々、ステージに立ったザ・ビートルズの姿を目の当たりにした人たちなどの証言を通して、公演実現までの軌跡や日本におけるザ・ビートルズの人気に迫る。",
+            "popularity": 3.94,
+            "poster_path": "/2xvOMpH9biPUHlWAX5Tf6RhEAXc.jpg",
+            "release_date": "2023-01-27",
+            "title": "『ミスタームーンライト』〜1966 ザ・ビートルズ武道館公演 みんなで見た夢〜",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 1030241,
+            "original_language": "ja",
+            "original_title": "あつい胸さわぎ",
+            "overview": "",
+            "popularity": 3.808,
+            "poster_path": "/gAlh043pyJgoYiLUMbRsald5aWN.jpg",
+            "release_date": "2023-01-27",
+            "title": "あつい胸さわぎ",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                18
+            ],
+            "id": 1066953,
+            "original_language": "ja",
+            "original_title": "コインランドリーカタルシス",
+            "overview": "劇作家・脚本家のえのものぐりむによる同名朗読劇を実写映画化。コインランドリーを舞台に4人の男女が紡ぐ出会いや別れを描く。",
+            "popularity": 3.621,
+            "poster_path": "/jBTqjqbZXvzZ3fLC8tBkZJ0BtUG.jpg",
+            "release_date": "2023-01-27",
+            "title": "コインランドリーカタルシス",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        }
+    ],
+    "total_pages": 3,
+    "total_results": 60
+}
