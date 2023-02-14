@@ -10,5 +10,7 @@ urlpatterns = [
     path('register_complete/', views.CheckInCompleteView.as_view(), name='register_complete'),
     path('checkin_list/', views.CheckInListView.as_view(), name='checkin_list'),
     path('checkin_detail/<str:pk>', views.CheckInDetailView.as_view(), name='checkin_detail'),
+    path('checkin_update/<str:pk>', views.CheckInUpdateView.as_view(), name='checkin_update'),
+
 
 ]

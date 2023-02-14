@@ -19,4 +19,4 @@ class MovieForm(forms.ModelForm):
     class Meta:
         model = CheckIns
         fields = "__all__"
-        exclude = ('author', 'pub_date',)
+        exclude = ('author', 'pub_date', 'movie')

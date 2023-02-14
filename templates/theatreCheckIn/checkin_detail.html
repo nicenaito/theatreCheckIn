@@ -13,8 +13,8 @@
             </tr>
             <tr>
                 <td>{{ object.checkin_datetime }}</td>
-                <td>{{ object.movie_title }}</td>
-                <td>{{ object.pub_date }}</td>
+                <td>{{ object.movie.movie_title }}</td>
+                <td>{{ object.movie.pub_date }}</td>
                 <td>{{ object.theatre }}</td>
             </tr>
         </table>
@@ -24,7 +24,12 @@
     <p>チェックイン履歴はありません。</p>
     {% endif %}
 
-    
+    <!-- <form action="{% url 'theatreCheckIn:checkin_update' object.checkin_id %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="更新">
+    </form> -->
+
     <form action="{% url 'theatreCheckIn:index' %}" method="GET">
         <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
     </form>

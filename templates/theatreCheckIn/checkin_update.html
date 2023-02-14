@@ -1,7 +1,6 @@
 <html>
 
 <body>
-    {% if object_list  %}
     <ul>
         
         <table>
@@ -11,22 +10,21 @@
                 <th>公開日</th> 
                 <th>劇場名</th>
             </tr>
-            {% for checkin in object_list  %}
             <tr>
-                <td>{{ checkin.checkin_datetime }}</td>
-                <td>{{ checkin.movie.movie_title }}</td>
-                <td>{{ checkin.movie.pub_date }}</td>
-                <td>{{ checkin.theatre }}</td>
-                <td><a href="{% url 'theatreCheckIn:checkin_detail' checkin.checkin_id %}">詳細</a></td>
+                <td>{{ object.checkin_datetime }}</td>
+                <td>{{ object.movie_title }}</td>
+                <td>{{ object.pub_date }}</td>
+                <td>{{ object.theatre }}</td>
             </tr>
-            {% endfor %}
         </table>
         
     </ul>
-    {% else %}
-    <p>チェックイン履歴はありません。</p>
-    {% endif %}
 
+    <form action="{% url 'theatreCheckIn:register_confirm' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="チェックイン">
+    </form>
     
     <form action="{% url 'theatreCheckIn:index' %}" method="GET">
         <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
