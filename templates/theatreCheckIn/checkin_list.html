@@ -18,6 +18,7 @@
                 <td>{{ checkin.movie.pub_date }}</td>
                 <td>{{ checkin.theatre }}</td>
                 <td><a href="{% url 'theatreCheckIn:checkin_detail' checkin.checkin_id %}">詳細</a></td>
+                <td><a href="{% url 'theatreCheckIn:checkin_delete' checkin.checkin_id %}">削除</a></td>
             </tr>
             {% endfor %}
         </table>
@@ -26,10 +27,9 @@
     {% else %}
     <p>チェックイン履歴はありません。</p>
     {% endif %}
-
-    
+  
     <form action="{% url 'theatreCheckIn:index' %}" method="GET">
-        <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
+        <button type="button" class="btn btn-primary btn-lg">戻る</button>
     </form>
 </body>
 

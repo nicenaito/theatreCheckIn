@@ -14,7 +14,7 @@ class MovieForm(forms.ModelForm):
     theatre_list = tuple(theatreplaces.get_movie_theatre(latitude, longitude))
     theatre = forms.ChoiceField(label='劇場', choices=theatre_list)
     
-    movie_title = forms.ChoiceField(label='作品名', choices=CheckIns.movie_list)
+    movie_id = forms.ChoiceField(label='作品名', choices=CheckIns.movie_list)
 
     class Meta:
         model = CheckIns

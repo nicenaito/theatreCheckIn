@@ -28,47 +28,26 @@ class CheckInInputView(View):
         form = MovieForm()
         context = {'form': form, }
         return render(request, 'theatreCheckIn/register.html', context)
-
-
 register = CheckInInputView.as_view()
-
-
-class CheckInConfirmView(generic.FormView):
-    template_name = 'theatreCheckIn/register_confirm.html'
-    context_object_name = 'register_confirm'
-
-    form_class = MovieForm
-
-    def form_valid(self, form):
-        form_class = MovieForm
-        context = {'form': form, }
-        return render(self.request, 'theatreCheckIn/register_confirm.html', context)
-
-    def form_invalid(self, form):
-        form_class = MovieForm
-        context = {'form': form, }
-        return render(self.request, 'theatreCheckIn/register.html', context)
-
 
 class CheckInCompleteView(generic.CreateView):
     form_class = MovieForm
-    success_url = reverse_lazy('theatreCheckIn:register')
+    success_url = reverse_lazy('theatreCheckIn:index')
 
     def form_valid(self, form):
         
-        selected_movie_id = int(self.request.POST.get('movie_title', None))
-        print(selected_movie_id)
+        selected_movie_id = int(self.request.POST.get('movie_id', None))
+        selected_movie_title = ""
         try:
             selected_movie = Movies.objects.get(pk=selected_movie_id)
+            selected_movie_title = selected_movie.movie_title
         except (KeyError, Movies.DoesNotExist):
-            # new_movie = [d.get("id") for d in CheckIns.movies]
             new_movie = {}
             for item in CheckIns.movies:
                 print(item["id"])
                 if item["id"] == selected_movie_id:
                     new_movie = item
                     break
-            # new_movie = [ item for item in CheckIns.movies if item['id'] == selected_movie_id ]
             print(new_movie)
             register_movie= Movies(
                 movie_id=new_movie["id"],
@@ -88,11 +67,12 @@ class CheckInCompleteView(generic.CreateView):
         qryset = form.save(commit=False)
         qryset.author_id = self.request.user.id
         qryset.movie_id = selected_movie_id
-        # qryset.pub_date = CheckIns.pub_date_list[self.request.POST.get('movie_title', None)]
         qryset.save()
-        context = {'form': form,}
+        template_name = 'theatreCheckIn/register_complete.html'
+        context = {'form': form,
+                   'selected_movie_title': selected_movie_title}
         
-        return render(self.request, 'theatreCheckIn/index.html', context)
+        return render(self.request, 'theatreCheckIn/register_complete.html', context)
 
     def form_invalid(self, form):
         return render(self.request, 'theatreCheckIn/register.html', {'form': form})
@@ -101,7 +81,6 @@ class CheckInListView(generic.ListView):
     template_name = 'theatreCheckIn/checkin_list.html'
     model = CheckIns
     ordering = '-checkin_datetime'
-# checkin_list = CheckInListView.as_view()
     
 class CheckInDetailView(generic.DetailView):
     model = CheckIns
@@ -109,29 +88,9 @@ class CheckInDetailView(generic.DetailView):
     def get_object(self):
         return CheckIns.objects.get(pk=self.kwargs["pk"])
     
-class CheckInUpdateView(generic.UpdateView):
+class CheckInDeleteView(generic.DeleteView):
     model = CheckIns
-    fields = ('checkin_datetime', 'theatre', 'movie_title', 'comment')
-    template_name = 'theatreCheckIn/checkin_update.html'
-    success_url = reverse_lazy('theatreCheckIn:checkin_update')
+    template_name = 'theatreCheckIn/checkin_delete.html'
+    success_url = reverse_lazy('theatreCheckIn:checkin_list')
     def get_object(self):
         return CheckIns.objects.get(pk=self.kwargs["pk"])
-
-# def update(request, checkin_id, generic.U):
-#     checkin = get_object_or_404(CheckIns, pk=checkin_id)
-#     try:
-#         selected_checkin = checkin.choice_set.get(pk=request.POST['checkin'])
-#     except (KeyError, Choice.DoesNotExist):
-#         # Redisplay the question voting form.
-#         return render(request, 'theatreCheckIn/checkin_list.html', {
-#             'question': checkin,
-#             'error_message': "チェックイン履歴が存在しません。",
-#         })
-#     else:
-#         form_class = MovieForm
-#         selected_checkin.author = form_class.fields
-#         checkin.save()
-#         # Always return an HttpResponseRedirect after successfully dealing
-#         # with POST data. This prevents data from being posted twice if a
-#         # user hits the Back button.
-#         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))

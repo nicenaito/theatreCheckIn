@@ -1,0 +1,26 @@
+チェックイン完了しました。
+
+登録内容は以下のとおりです。
+
+{% block content %}
+{% for field in form %}
+{% if field.id_for_label == "id_movie_id" %}
+<div class="form-group">
+    <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+    {{selected_movie_title}}
+</div>
+{% else %}
+<div class="form-group">
+    <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+    {{ field.value }}
+</div>
+{% endif %}
+
+{% endfor %}
+
+
+<hr>
+<form action="{% url 'theatreCheckIn:index' %}" method="GET">
+    <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">TOP</button>
+</form>
+{% endblock %}

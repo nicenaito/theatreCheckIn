@@ -1,0 +1,12 @@
+<form method="post">
+    {% csrf_token %}
+    <p>チェックインを本当に削除しますか?</p>
+    <p>チェックイン日時：{{ object.checkin_datetime }}</p>
+    <p>劇場：{{ object.theatre }}</p>
+    <p>作品名：{{ object.movie.movie_title }}</p>
+    <p>コメント：{{ object.comment }}</p>
+    <input type="submit" value="削除">
+    <form action="{% url 'theatreCheckIn:index' %}" method="GET">
+        <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
+    </form>
+</form>

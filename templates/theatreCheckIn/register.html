@@ -1,4 +1,4 @@
-<form action="{% url 'theatreCheckIn:register_confirm' %}" method="POST">
+<form action="{% url 'theatreCheckIn:register_complete' %}" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="チェックイン">

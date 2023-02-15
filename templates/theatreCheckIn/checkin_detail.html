@@ -24,12 +24,6 @@
     <p>チェックイン履歴はありません。</p>
     {% endif %}
 
-    <!-- <form action="{% url 'theatreCheckIn:checkin_update' object.checkin_id %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="更新">
-    </form> -->
-
     <form action="{% url 'theatreCheckIn:index' %}" method="GET">
         <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
     </form>
