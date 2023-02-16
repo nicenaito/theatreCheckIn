@@ -1,6 +1,18 @@
-<html>
+{% load static %}
+{% load django_bootstrap5 %}
+<!doctype html>
+<html lang="ja">
 
-<body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>映画館チェックインサービス</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body class="text-left">
     {% if object  %}
     <ul>
         
@@ -25,7 +37,7 @@
     {% endif %}
 
     <form action="{% url 'theatreCheckIn:index' %}" method="GET">
-        <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
+        <button type="button" onclick="history.back()" class="btn btn-secondary btn-lg">戻る</button>
     </form>
 </body>
 

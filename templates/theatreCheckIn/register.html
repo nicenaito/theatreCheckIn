@@ -1,8 +1,26 @@
-<form action="{% url 'theatreCheckIn:register_complete' %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="チェックイン">
-</form>
-<form action="{% url 'theatreCheckIn:index' %}" method="GET">
-    <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
-</form>
+{% load static %}
+{% load django_bootstrap5 %}
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>映画館チェックインサービス</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body class="text-left">
+    <form action="{% url 'theatreCheckIn:register_complete' %}" method="POST">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input class="btn btn-primary btn-lg" type="submit" value="チェックイン">
+        <form action="{% url 'theatreCheckIn:index' %}" method="GET">
+            <button type="button" onclick="history.back()" class="btn btn-secondary btn-lg">戻る</button>
+        </form>
+    </form>
+</body>
+
+</html>

@@ -1,12 +1,32 @@
-<form method="post">
-    {% csrf_token %}
-    <p>チェックインを本当に削除しますか?</p>
-    <p>チェックイン日時：{{ object.checkin_datetime }}</p>
-    <p>劇場：{{ object.theatre }}</p>
-    <p>作品名：{{ object.movie.movie_title }}</p>
-    <p>コメント：{{ object.comment }}</p>
-    <input type="submit" value="削除">
-    <form action="{% url 'theatreCheckIn:index' %}" method="GET">
-        <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">戻る</button>
+{% load static %}
+{% load django_bootstrap5 %}
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>映画館チェックインサービス</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body class="text-left">
+
+    <form method="post">
+        {% csrf_token %}
+        <h1>チェックインを本当に削除しますか?</h1>
+        <p>チェックイン日時：{{ object.checkin_datetime }}</p>
+        <p>劇場：{{ object.theatre }}</p>
+        <p>作品名：{{ object.movie.movie_title }}</p>
+        <p>コメント：{{ object.comment }}</p>
+
+        <input class="btn btn-primary btn-lg" type="submit" value="削除">
+        <form action="{% url 'theatreCheckIn:index' %}" method="GET">
+            <button type="button" onclick="history.back()" class="btn btn-secondary btn-lg">戻る</button>
+        </form>
     </form>
-</form>
+</body>
+
+</html>

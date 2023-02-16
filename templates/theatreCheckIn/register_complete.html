@@ -1,26 +1,42 @@
-チェックイン完了しました。
+{% load static %}
+{% load django_bootstrap5 %}
+<!doctype html>
+<html lang="ja">
 
-登録内容は以下のとおりです。
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>映画館チェックインサービス</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
 
-{% block content %}
-{% for field in form %}
-{% if field.id_for_label == "id_movie_id" %}
-<div class="form-group">
-    <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
-    {{selected_movie_title}}
-</div>
-{% else %}
-<div class="form-group">
-    <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
-    {{ field.value }}
-</div>
-{% endif %}
+<body class="text-left">
+    <h1>チェックインが完了しました。</h1>
+    <h3>登録内容は以下のとおりです。</h3>
 
-{% endfor %}
+    {% block content %}
+    {% for field in form %}
+    {% if field.id_for_label == "id_movie_id" %}
+    <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+        {{selected_movie_title}}
+    </div>
+    {% else %}
+    <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label_tag }}</label>
+        {{ field.value }}
+    </div>
+    {% endif %}
+
+    {% endfor %}
 
 
-<hr>
-<form action="{% url 'theatreCheckIn:index' %}" method="GET">
-    <button type="button" onclick="history.back()" class="btn btn-primary btn-lg">TOP</button>
-</form>
-{% endblock %}
+    <hr>
+    <form action="{% url 'theatreCheckIn:index' %}" method="GET">
+        <button type="submit" class="btn btn-primary btn-lg">TOP</button>
+    </form>
+    {% endblock %}
+
+</body>
