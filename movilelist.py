@@ -1,13 +1,13 @@
 import requests
 import json
+from django.conf import settings
 
 def get_now_playing_movie_list():
     
-    json_file = open('../settings.json', 'r')
-    json_data = json.load(json_file)
+    # print(settings.API_MOVIE)
 
-    url = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + json_data["API_MOVIE"] + "&language=ja&region=jp"
-    print(url)
+    url = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + settings.API_MOVIE + "&language=ja&region=jp"
+    # print(url)
     payload={}
     headers = {}
 
@@ -23,7 +23,7 @@ def get_now_playing_movie_list():
         for movie in movies:
             movie_list.append( (movie["id"], movie["title"]))
             pub_date_list[movie["id"]] = movie["release_date"]
-        print(movie_list)
+        # print(movie_list)
         
     return movie_list, pub_date_list, movies
         

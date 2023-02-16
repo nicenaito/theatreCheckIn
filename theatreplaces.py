@@ -1,5 +1,6 @@
 import requests
 import json
+from django.conf import settings
 
 def current_place():
     """
@@ -24,17 +25,14 @@ def get_movie_theatre(latitude, longitude):
         longitude (int): 現在地の経度
     """
     
-    json_file = open('../settings.json', 'r')
-    json_data = json.load(json_file)
-        
-    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + latitude + "," + longitude + "&radius=2000&type=movie_theater&key=" + json_data["API_MAP"]
-    print(url)
+    url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + latitude + "," + longitude + "&radius=2000&type=movie_theater&key=" + settings.API_MAP
+    # print(url)
     payload={}
     headers = {}
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    print(response.text)
+    # print(response.text)
 
     f = open("theatreplaces.json", "r", encoding="utf-8")
     json_dict = json.load(f)
