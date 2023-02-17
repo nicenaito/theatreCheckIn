@@ -81,6 +81,9 @@ class CheckInListView(generic.ListView):
     template_name = 'theatreCheckIn/checkin_list.html'
     model = CheckIns
     ordering = '-checkin_datetime'
+    def get_queryset(self):
+        current_user = self.request.user
+        return CheckIns.objects.filter(author=current_user.id)
     
 class CheckInDetailView(generic.DetailView):
     model = CheckIns
