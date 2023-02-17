@@ -32,10 +32,7 @@ def get_movie_theatre(latitude, longitude):
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    # print(response.text)
-
-    f = open("theatreplaces.json", "r", encoding="utf-8")
-    json_dict = json.load(f)
+    json_dict = response.json()
 
     movie_theatre = []
 
