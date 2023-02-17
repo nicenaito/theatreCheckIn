@@ -1,0 +1,27 @@
+{% load static %}
+{% load django_bootstrap5 %}
+
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>theatreCheckIn</title>
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+<body class="text-center">
+  <main class="form-signin w-100 m-auto">
+    <h1>サインアップ</h1>
+    <form action="{% url 'accounts:signup' %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <p><input type="submit" value="登録"></p>
+    </form>
+  </main>
+</body>
+
+</html>
