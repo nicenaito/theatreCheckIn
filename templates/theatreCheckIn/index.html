@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">theaterCheckin</a>
@@ -22,9 +24,10 @@
 </nav>
 
 <body class="text-center">
+
     <div class="d-grid gap-2 col-6 mx-auto">
         <br>
-        <a class="btn btn-primary btn-lg" href="{% url 'theatreCheckIn:register' %}" role="button">チェックイン</a>
+        <a class="btn btn-primary btn-lg" href="{% url 'theatreCheckIn:searching_theatre' %}" role="button" id="checkin">チェックイン</a>
         <br>
         <a class="btn btn-primary btn-lg" href="{% url 'theatreCheckIn:checkin_list' %}" role="button">チェックイン履歴</a>
         <br>

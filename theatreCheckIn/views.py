@@ -8,7 +8,9 @@ from django.views import View
 from django.views import generic
 from .models import CheckIns
 from .models import Movies
-from .forms import MovieForm
+from .forms import MovieForm, TheatreSearchForm
+import theatreplaces
+import datetime
 
 
 class IndexView(generic.ListView):
@@ -19,14 +21,24 @@ class IndexView(generic.ListView):
         """Return the movies."""
         return CheckIns.objects.all()
 
+class TheatreSearchView(generic.FormView):
+    template_name = 'theatreCheckIn/search_theatre.html'
+    def get(self, request, *args, **kwargs):
+        form = TheatreSearchForm()
+        context = {'form': form,}
+        return render(request, 'theatreCheckIn/search_theatre.html', context)
+register = TheatreSearchView.as_view()
 
 class CheckInInputView(View):
     template_name = 'theatreCheckIn/register.html'
     context_object_name = 'register'
 
     def get(self, request, *args, **kwargs):
-        form = MovieForm()
-        context = {'form': form, }
+        now = datetime.datetime.now()
+        current_datetime = now.strftime('%Y-%m-%d %H:%M:%S')
+        form = MovieForm(request.POST or {"theatre": request.GET.get("theatre"), "checkin_datetime":current_datetime})
+        # form.theatre = request.GET.get("theatre")
+        context = {'form': form,}
         return render(request, 'theatreCheckIn/register.html', context)
 register = CheckInInputView.as_view()
 
@@ -35,7 +47,6 @@ class CheckInCompleteView(generic.CreateView):
     success_url = reverse_lazy('theatreCheckIn:index')
 
     def form_valid(self, form):
-        
         selected_movie_id = int(self.request.POST.get('movie_id', None))
         selected_movie_title = ""
         try:
@@ -49,7 +60,7 @@ class CheckInCompleteView(generic.CreateView):
                     new_movie = item
                     break
             print(new_movie)
-            register_movie= Movies(
+            register_movie = Movies(
                 movie_id=new_movie["id"],
                 movie_title=new_movie["title"],
                 pub_date=new_movie["release_date"],
@@ -58,12 +69,12 @@ class CheckInCompleteView(generic.CreateView):
                 original_language=new_movie["original_language"],
                 overview=new_movie["overview"],
                 checkin_count=1
-                )
+            )
             register_movie.save()
         else:
             selected_movie.checkin_count += 1
             selected_movie.save()
-        
+
         qryset = form.save(commit=False)
         qryset.author_id = self.request.user.id
         qryset.movie_id = selected_movie_id
@@ -71,29 +82,35 @@ class CheckInCompleteView(generic.CreateView):
         template_name = 'theatreCheckIn/register_complete.html'
         context = {'form': form,
                    'selected_movie_title': selected_movie_title}
-        
+
         return render(self.request, 'theatreCheckIn/register_complete.html', context)
 
     def form_invalid(self, form):
         return render(self.request, 'theatreCheckIn/register.html', {'form': form})
-    
+
+
 class CheckInListView(generic.ListView):
     template_name = 'theatreCheckIn/checkin_list.html'
     model = CheckIns
     ordering = '-checkin_datetime'
+
     def get_queryset(self):
         current_user = self.request.user
         return CheckIns.objects.filter(author=current_user.id)
-    
+
+
 class CheckInDetailView(generic.DetailView):
     model = CheckIns
     template_name = 'theatreCheckIn/checkin_detail.html'
+
     def get_object(self):
         return CheckIns.objects.get(pk=self.kwargs["pk"])
-    
+
+
 class CheckInDeleteView(generic.DeleteView):
     model = CheckIns
     template_name = 'theatreCheckIn/checkin_delete.html'
     success_url = reverse_lazy('theatreCheckIn:checkin_list')
+
     def get_object(self):
         return CheckIns.objects.get(pk=self.kwargs["pk"])

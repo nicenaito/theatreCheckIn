@@ -40,9 +40,7 @@ def get_movie_theatre(latitude, longitude):
     if json_dict["status"] == "OK":
         for theatre in json_dict["results"]:
             movie_theatre.append((theatre["name"],theatre["name"]))
-        # print(movie_theatre)
-    else:
-        movie_theatre = get_movie_theatre("35.689611", "139.6983772")
+        print(movie_theatre)
         
     return movie_theatre
 
@@ -55,7 +53,7 @@ def search_theatre(search_text):
         longitude (int): 現在地の経度
     """
     
-    url = urllib.parse.quote("https://maps.googleapis.com/maps/api/place/textsearch/json?type=movie_theater&query=" + search_text +"&key=" + settings.API_MAP)
+    url = "https://maps.googleapis.com/maps/api/place/textsearch/json?language=ja&type=movie_theater&query=" + urllib.parse.quote(search_text) + "&key=" + settings.API_MAP
     # print(url)
     payload={}
     headers = {}
@@ -68,10 +66,10 @@ def search_theatre(search_text):
 
     if json_dict["status"] == "OK":
         for theatre in json_dict["results"]:
-            movie_theatre.append((theatre["name"],theatre["name"]))
-        print(movie_theatre)
-    else:
-        movie_theatre.append("Result nothing","Result nothing")
+            movie_theatre.append((theatre["name"], theatre["name"]))
+        # print(movie_theatre)
+    # else:
+    #     movie_theatre.append("Result nothing","Result nothing")
         
     return movie_theatre
 

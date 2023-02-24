@@ -18,7 +18,7 @@ class CheckIns(models.Model):
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     checkin_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     checkin_datetime = models.DateTimeField(verbose_name='鑑賞日時')
-    theatre = models.CharField(max_length=200, verbose_name='劇場')
+    theatre = models.CharField(null=False, max_length=200, verbose_name='劇場')
     movie = models.ForeignKey(Movies, on_delete=models.CASCADE)
     comment = models.TextField(null=True, verbose_name='感想')
     

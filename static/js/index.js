@@ -1,0 +1,52 @@
+var map;
+var service;
+var infowindow;
+
+function initMap(btn) {
+    if (btn == 1) {
+        var sydney = new google.maps.LatLng(35.689611, 139.6983826);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(
+            document.getElementById('map'), { radius: 5000 });
+
+        var search_text = document.getElementById('id_search');
+
+        var request = {
+            query: search_text.value,
+            location: sydney,
+            radius: '5000',
+            type: 'movie_theater'
+        };
+
+        service = new google.maps.places.PlacesService(map);
+        service.textSearch(request, callback);
+
+        function callback(results, status) {
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                // selectタグのID取得
+                var select = document.getElementById('id_theatre');
+                // while (select.firstChild) {
+                //     select.removeChild(select.firstChild);
+                // }
+                // removeChild(select);
+                for (var i = 0; i < results.length; i++) {
+                    var place = results[i];
+                    // option要素の宣言
+                    var option = document.createElement('option');
+                    // option要素のvalue属性に値をセット
+                    option.setAttribute('value', results[i].name);
+                    // option要素に値をセット
+                    option.innerHTML = results[i].name;
+                    // 作成したoption要素をselectタグに追加
+                    select.appendChild(option);
+                    console.log(select);
+                }
+            }
+        }
+
+    }
+
+}
+window.initMap = initMap;
