@@ -13,12 +13,14 @@ class MovieForm(forms.ModelForm):
     latitude, longitude = theatreplaces.current_place()
     theatre_list = tuple(theatreplaces.get_movie_theatre(latitude, longitude))
     theatre = forms.CharField(label='劇場')
-    movie_id = forms.ChoiceField(label='作品名', choices=CheckIns.movie_list)
+    movie_list, movies = tuple(movilelist.get_now_playing_movie_list())
+    CheckIns.movies = movies
+    movie_id = forms.ChoiceField(label='作品名', choices=movie_list)
 
     class Meta:
         model = CheckIns
         fields = "__all__"
         exclude = ('author', 'pub_date', 'movie')
-
+        
 class TheatreSearchForm(forms.Form):
     theatre = forms.ChoiceField(label='劇場')

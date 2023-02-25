@@ -1,7 +1,4 @@
-from django.http import Http404
-from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponse, HttpResponseRedirect
-from django.urls import reverse
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.shortcuts import render
 from django.views import View
@@ -9,7 +6,6 @@ from django.views import generic
 from .models import CheckIns
 from .models import Movies
 from .forms import MovieForm, TheatreSearchForm
-import theatreplaces
 import datetime
 
 
@@ -32,11 +28,11 @@ register = TheatreSearchView.as_view()
 class CheckInInputView(View):
     template_name = 'theatreCheckIn/register.html'
     context_object_name = 'register'
-
+    
     def get(self, request, *args, **kwargs):
         now = datetime.datetime.now()
         current_datetime = now.strftime('%Y-%m-%d %H:%M:%S')
-        form = MovieForm(request.POST or {"theatre": request.GET.get("theatre"), "checkin_datetime":current_datetime})
+        form = MovieForm(request.POST or {"theatre": request.GET.get("theatre"), "checkin_datetime":current_datetime, "movie_id":0})
         # form.theatre = request.GET.get("theatre")
         context = {'form': form,}
         return render(request, 'theatreCheckIn/register.html', context)
@@ -53,24 +49,8 @@ class CheckInCompleteView(generic.CreateView):
             selected_movie = Movies.objects.get(pk=selected_movie_id)
             selected_movie_title = selected_movie.movie_title
         except (KeyError, Movies.DoesNotExist):
-            new_movie = {}
-            for item in CheckIns.movies:
-                print(item["id"])
-                if item["id"] == selected_movie_id:
-                    new_movie = item
-                    break
-            print(new_movie)
-            register_movie = Movies(
-                movie_id=new_movie["id"],
-                movie_title=new_movie["title"],
-                pub_date=new_movie["release_date"],
-                original_title=new_movie["original_title"],
-                poster_path=new_movie["poster_path"],
-                original_language=new_movie["original_language"],
-                overview=new_movie["overview"],
-                checkin_count=1
-            )
-            register_movie.save()
+            print("該当の作品はデータベースに存在しません。")
+            print("映画ID：" + selected_movie.movie_id + ", 映画タイトル：" + selected_movie_title)
         else:
             selected_movie.checkin_count += 1
             selected_movie.save()

@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 import uuid
-import movilelist
 
 class Movies(models.Model):
     movie_id = models.IntegerField(primary_key=True, editable=False)
@@ -20,8 +19,10 @@ class CheckIns(models.Model):
     checkin_datetime = models.DateTimeField(verbose_name='鑑賞日時')
     theatre = models.CharField(null=False, max_length=200, verbose_name='劇場')
     movie = models.ForeignKey(Movies, on_delete=models.CASCADE)
-    comment = models.TextField(null=True, verbose_name='感想')
+    comment = models.TextField(blank = True, null = True, verbose_name='感想')
+    
+    movies = []
     
     
-    movie_list, pub_date_list, movies = tuple(movilelist.get_now_playing_movie_list())
+    # movie_list, pub_date_list, movies = tuple(movilelist.get_now_playing_movie_list())
     

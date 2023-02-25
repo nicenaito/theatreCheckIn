@@ -1,10 +1,24 @@
 var map;
 var service;
 var infowindow;
+var lat = 35.689611;
+var lng = 139.6983826;
 
 function initMap(btn) {
+    function success(pos) {
+		lat = pos.coords.latitude;
+		lng = pos.coords.longitude;
+	}
+	function fail(error) {
+		alert('位置情報の取得に失敗しました。エラーコード：' + error.code);
+        lat = 35.689611;
+		lng = 139.6983826;
+		var latlng = new google.maps.LatLng(35.6812405, 139.7649361); //東京駅
+	}
+	navigator.geolocation.getCurrentPosition(success, fail);
+
     if (btn == 1) {
-        var sydney = new google.maps.LatLng(35.689611, 139.6983826);
+        var sydney = new google.maps.LatLng(lat, lng);
 
         infowindow = new google.maps.InfoWindow();
 
@@ -27,9 +41,9 @@ function initMap(btn) {
             if (status == google.maps.places.PlacesServiceStatus.OK) {
                 // selectタグのID取得
                 var select = document.getElementById('id_theatre');
-                // while (select.firstChild) {
-                //     select.removeChild(select.firstChild);
-                // }
+                while (select.firstChild) {
+                    select.removeChild(select.firstChild);
+                }
                 // removeChild(select);
                 for (var i = 0; i < results.length; i++) {
                     var place = results[i];
