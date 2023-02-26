@@ -12,26 +12,41 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 
-<body class="text-left">
-    {% if object  %}
-    <ul>
-        
-        <table>
-            <tr>
-                <th>鑑賞日時</th>
-                <th>映画タイトル</th>
-                <th>公開日</th> 
-                <th>劇場名</th>
-            </tr>
-            <tr>
-                <td>{{ object.checkin_datetime }}</td>
-                <td>{{ object.movie.movie_title }}</td>
-                <td>{{ object.movie.pub_date }}</td>
-                <td>{{ object.theatre }}</td>
-            </tr>
-        </table>
-        
-    </ul>
+<body class="text-center">
+    {% if object %}
+    <h3>鑑賞日時</h3>
+    {{ object.checkin_datetime }}
+    <br>
+    <br>
+    <h3>劇場名</h3>
+    {{ object.theatre }}
+    <br>
+    <br>
+    <h3>映画タイトル</h3>
+    {{ object.movie.movie_title }}
+    <br>
+    <br>
+    <h3>公開日</h3>
+    {{ object.movie.pub_date }}
+    <br>
+    <br>
+    <h3>オリジナルタイトル</h3>
+    {{ object.movie.original_title }}
+    <br>
+    <br>
+    <h3>あらすじ</h3>
+    {% if object.movie.overview %}
+    {{ object.movie.overview }}
+    {% else %}
+    あらすじのデータがありません。
+    {% endif %}
+    <br>
+    <br>
+    <h3>ポスター</h3>
+    <img src="https://image.tmdb.org/t/p/w500{{ object.movie.poster_path }}" alt="ポスター画像" title="{{ object.movie.movie_title }}">
+    <br>
+    <br>
+
     {% else %}
     <p>チェックイン履歴はありません。</p>
     {% endif %}
