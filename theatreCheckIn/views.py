@@ -6,7 +6,7 @@ from django.views import generic
 from .models import CheckIns
 from .models import Movies
 from .forms import MovieForm, TheatreSearchForm
-import datetime
+from django.utils import timezone
 
 
 class IndexView(generic.ListView):
@@ -30,9 +30,12 @@ class CheckInInputView(View):
     context_object_name = 'register'
     
     def get(self, request, *args, **kwargs):
-        now = datetime.datetime.now()
-        current_datetime = now.strftime('%Y-%m-%d %H:%M:%S')
-        form = MovieForm(request.POST or {"theatre": request.GET.get("theatre"), "checkin_datetime":current_datetime, "movie_id":0})
+        now = timezone.now()
+        # current_datetime = now.strftime('%Y-%m-%d %H:%M:%S')
+        
+        now_playing_movies = Movies.objects.filter(now_playing=True)
+        
+        form = MovieForm(request.POST or {"theatre": request.GET.get("theatre"), "checkin_datetime":timezone.now()})
         # form.theatre = request.GET.get("theatre")
         context = {'form': form,}
         return render(request, 'theatreCheckIn/register.html', context)

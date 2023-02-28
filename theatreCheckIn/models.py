@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 import uuid
+from django.utils import timezone
 
 class Movies(models.Model):
     movie_id = models.IntegerField(primary_key=True, editable=False)
@@ -11,7 +12,9 @@ class Movies(models.Model):
     original_language = models.CharField(max_length=2, verbose_name='劇場')
     overview = models.TextField(null=True, verbose_name='あらすじ')
     checkin_count = models.IntegerField(default=0, verbose_name='チェックイン回数')
-
+    now_playing = models.BooleanField(default=True, verbose_name='公開中フラグ')
+    created_datetime = models.DateTimeField(default=timezone.now, verbose_name='登録日時')
+    updated_datetime = models.DateTimeField(default=timezone.now, verbose_name='更新日時')
 
 class CheckIns(models.Model):
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
@@ -22,7 +25,3 @@ class CheckIns(models.Model):
     comment = models.TextField(blank = True, null = True, verbose_name='感想')
     
     movies = []
-    
-    
-    # movie_list, pub_date_list, movies = tuple(movilelist.get_now_playing_movie_list())
-    
