@@ -76,6 +76,8 @@ class Command(BaseCommand):
         i = 1
         while i <= number_of_results:
         # for i in range(1, number_of_results):
+        
+            logger.debug("Getting page = " + str(i))
             url = base_url + str(i)
             payload = {}
             headers = {}
@@ -87,6 +89,7 @@ class Command(BaseCommand):
 
             movies_dict.append(response.json())
             logger.debug("Dictionary is made: " + str(movies_dict))
+            logger.debug("Done getting page = " + str(i))
             
             i += 1
             	
