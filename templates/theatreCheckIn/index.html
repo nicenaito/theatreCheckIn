@@ -5,16 +5,26 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>映画館チェックインサービス</title>
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
+    <script type="module" src="{% static 'js/index.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/config.js' %}"></script>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
 </head>
 
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">theaterCheckin</a>
         <a class="navbar-text" href="#">{% if user.is_authenticated %}
@@ -27,11 +37,11 @@
 
     <div class="d-grid gap-2 col-6 mx-auto">
         <br>
-        <a class="btn btn-primary btn-lg" href="{% url 'theatreCheckIn:searching_theatre' %}" role="button" id="checkin">チェックイン</a>
+        <a class="btn btn-primary btn-rounded" href="{% url 'theatreCheckIn:searching_theatre' %}" role="button" id="checkin">チェックイン</a>
         <br>
-        <a class="btn btn-primary btn-lg" href="{% url 'theatreCheckIn:checkin_list' %}" role="button">チェックイン履歴</a>
+        <a class="btn btn-primary btn-rounded" href="{% url 'theatreCheckIn:checkin_list' %}" role="button">チェックイン履歴</a>
         <br>
-        <a class="btn btn-secondary btn-lg" href="{% url 'accounts:logout' %}">ログアウト</a>
+        <a class="btn btn-dark btn-rounded" href="{% url 'accounts:logout' %}">ログアウト</a>
     </div>
 </body>
 
