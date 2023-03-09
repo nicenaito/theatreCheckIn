@@ -44,13 +44,11 @@
     <br>
     <h3>オリジナルタイトル</h3>
     {{ object.movie.original_title }}
+    {% if object.movie.overview %}
     <br>
     <br>
     <h3>あらすじ</h3>
-    {% if object.movie.overview %}
     {{ object.movie.overview }}
-    {% else %}
-    あらすじのデータがありません。
     {% endif %}
     <br>
     <br>
