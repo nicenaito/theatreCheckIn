@@ -11,6 +11,7 @@ urlpatterns = [
     path('checkin_list/', views.CheckInListView.as_view(), name='checkin_list'),
     path('checkin_detail/<str:pk>', views.CheckInDetailView.as_view(), name='checkin_detail'),
     path('checkin_delete/<str:pk>', views.CheckInDeleteView.as_view(), name='checkin_delete'),
+    path('searching_movie/', views.MovieSearchView.as_view(), name='searching_movie'),
 
 
 ]

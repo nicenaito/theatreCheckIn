@@ -7,6 +7,8 @@ from .models import CheckIns
 from .models import Movies
 from .forms import MovieForm, TheatreSearchForm
 from django.utils import timezone
+from django.conf import settings
+import requests
 
 
 class IndexView(generic.ListView):
@@ -97,3 +99,21 @@ class CheckInDeleteView(generic.DeleteView):
 
     def get_object(self):
         return CheckIns.objects.get(pk=self.kwargs["pk"])
+
+class MovieSearchView(generic.FormView):
+    template_name = 'theatreCheckIn/search_movie.html'
+    def get(self, request, *args, **kwargs):
+        url = "https://api.themoviedb.org/3/search/movie?api_key=" + settings.API_MOVIE + "&language=ja"
+        payload = {}
+        headers = {}
+
+        response = requests.request("GET", url, headers=headers, data=payload)
+
+        json_dict = response.json()
+        
+        total_pages = json_dict["total_pages"]
+        
+        if total_pages > 0:  
+            context = {'result': json_dict,}
+        return render(request, 'theatreCheckIn/search_movie.html', context)
+register = TheatreSearchView.as_view()

@@ -1,0 +1,78 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>映画館チェックインサービス</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
+    <script type="module" src="{% static 'js/index.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/config.js' %}"></script>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}" />
+</head>
+
+<body class="text-left">
+    <div id="map"></div>
+
+    <div class="input-group mb-3">
+        <input type="search" class="form-control" name="search" id="id_search" placeholder="キーワードを入力して映画作品を検索">
+        <input class="btn btn-outline-primary" type="submit" id="button-addon2" data-mdb-ripple-color="dark"
+            name="submit" onclick="searchMovie()" value="検索">
+    </div>
+
+    <div class="ard w-25" id="id_card"></div>
+
+
+    <form action="{% url 'theatreCheckIn:register' %}" method="GET">
+        {% csrf_token %}
+        <input class="btn btn-info btn-rounded" type="submit" value="次のページヘ">
+    </form>
+</body>
+<script>
+    function searchMovie() {
+        var search_text = document.getElementById('id_search').value;
+        var url = "https://api.themoviedb.org/3/search/movie?api_key=" + config.API_MOVIE + "&language=ja&&region=jp&query=" + search_text;
+        console.log(url);
+        var request = new XMLHttpRequest();
+        request.open('GET', url, true);
+        request.onload = function () {
+            var jsonData = this.response;
+            let objData = JSON.parse(jsonData).results;
+
+            let html = '';
+
+            for (i = 0; i < objData.length; i++) {
+                console.log(objData[i].title);
+                let htmlParts =
+                    '<img class="card-img-top" width="50%" src="' +
+                    'https://image.tmdb.org/t/p/w500' + objData[i].poster_path + '" />'
+                    + '<div class="card-body">'
+                    + '<h5 class="card-title">' + objData[i].title + '</h5>'
+                    + '<p class="card-text">' + objData[i].overview + '</p>';
+
+                // 先述の変数の中に、出来上がったHTMLを格納
+                html += htmlParts;
+            }
+
+            document.getElementById('id_card').innerHTML = html;
+
+        }
+        request.send();
+    }
+
+</script>
+
+</html>
