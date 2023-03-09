@@ -25,6 +25,12 @@ class Command(BaseCommand):
                     now_playing_movie_id_list.append(data["id"])
                     try:
                         movie = Movies.objects.get(pk=data["id"])
+                        if movie.overview == "" and data["overview"] != "":
+                            movie.overview = data["overview"]
+                            movie.updated_datetime = timezone.now()
+                            movie.save()
+                            logger.info("あらすじを登録しました。")
+                            
                         logger.info("The movie has been on DB. Title: " + movie.movie_title)
                         
                     except (KeyError, Movies.DoesNotExist):
