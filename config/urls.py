@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+from django.urls import include, path
+from rest_framework import routers
+from api import views
+
+router = routers.DefaultRouter()
+router.register(r'checkins', views.CheckinViewSet)
+router.register(r'movies', views.MovieViewSet)
 
 # URLの全体設計
 urlpatterns = [
@@ -25,4 +32,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # 何もURLを指定しない場合（app_config/views.pyで、自動的に「app_folder」にアクセスするよう設定済み）
     path('', include('accounts.urls')),
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls')),
 ]

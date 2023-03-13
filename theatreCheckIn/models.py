@@ -9,7 +9,7 @@ class Movies(models.Model):
     pub_date = models.DateField(verbose_name='公開日')
     original_title = models.CharField(max_length=800, verbose_name='オリジナル作品名')
     poster_path = models.TextField(null=True, verbose_name='ポスター画像パス')
-    original_language = models.CharField(max_length=2, verbose_name='劇場')
+    original_language = models.CharField(max_length=2, verbose_name='オリジナル言語')
     overview = models.TextField(null=True, verbose_name='あらすじ')
     checkin_count = models.IntegerField(default=0, verbose_name='チェックイン回数')
     now_playing = models.BooleanField(default=True, verbose_name='公開中フラグ')
