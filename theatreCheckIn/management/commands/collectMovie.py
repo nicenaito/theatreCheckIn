@@ -1,14 +1,11 @@
 from django.core.management.base import BaseCommand
 from theatreCheckIn.models import Movies
-from django.conf import settings
 import requests
-from django.utils import timezone
 import logging
-import requests
 from bs4 import BeautifulSoup
 import re
 import datetime
-from datetime import date, timedelta
+from datetime import timedelta
 
 logger = logging.getLogger(__name__)
 
@@ -55,93 +52,19 @@ class Command(BaseCommand):
 
         print(len(movie_list))
 
-        # TODO: DBへの登録処理を修正する
-        for movie_list in movies_dict:
-            for data in movie_list["results"]:
-                now_playing_movie_id_list.append(data["id"])
-                try:
-                    movie = Movies.objects.get(pk=data["id"])
-                    if movie.overview == "" and data["overview"] != "":
-                        movie.overview = data["overview"]
-                        movie.updated_datetime = timezone.now()
-                        movie.save()
-                        logger.info("あらすじを登録しました。")
-
-                    logger.info(
-                        "The movie has been on DB. Title: " + movie.movie_title)
-
-                except (KeyError, Movies.DoesNotExist):
-                    register_movie = Movies(
-                    movie_id=data["id"],
-                    movie_title=data["title"],
-                    pub_date=data["release_date"],
-                    original_title=data["original_title"],
-                    poster_path=data["poster_path"],
-                    original_language=data["original_language"],
-                    overview=data["overview"],
-                    )
-                    register_movie.save()
-                    logger.info(
-                        "The movie has been registered in DB. Title: " + data["title"])
-
-        registered_movies = Movies.objects.values_list(
-            'movie_id', flat=True)
-
-        # DBに登録されている映画が公開中映画APIのレスポンスに含まれていない場合、公開中フラグをFalseにする。
-        for query_result in registered_movies:
-            if query_result not in now_playing_movie_id_list:
-                selected_movie = Movies.objects.get(pk=query_result)
-                if selected_movie.now_playing == True and selected_movie.pub_date < timezone.now().date():
-                    selected_movie.now_playing = False
-                    selected_movie.updated_datetime = timezone.now()
-                    selected_movie.save()
-                    logger.info(
-                        "The flag of 'now playing' for the movie has been updated to False. Title: " + selected_movie.movie_title)
+        # TODO: #1 DBへの登録処理を修正する
+        for movie in movie_list:
+            register_movie = Movies(
+            movie_id=movie["movie_id"],
+            movie_title=movie["title"],
+            pub_date=movie["pub_date"],
+            discription=movie["discription"],
+            )
+            register_movie.save()
+            logger.info("The movie has been registered in DB. Title: " + movie["title"])
 
         logger.info("collectMovie end")
                     
-        def getNumberOfResults(self, base_url):
-            logger.info("getNumberOfResults start")
-            payload = {}
-            headers = {}
-
-            logger.info("API Request")
-            response = requests.request("GET", base_url, headers=headers, data=payload)
-            logger.info("API Response recieved")
-
-            json_dict = response.json()
-            
-            total_pages = json_dict["total_pages"]
-            
-            logger.info("getNumberOfResults end")
-            
-            return total_pages
-        
-        def makeNowPlayingMoviesDict(self, base_url, number_of_results, movies_dict):
-            logger.info("makeNowPlayingMoviesDict start")
-            i = 1
-            while i <= number_of_results:
-            # for i in range(1, number_of_results):
-            
-                logger.debug("Getting page = " + str(i))
-                url = base_url + str(i)
-                payload = {}
-                headers = {}
-
-                logger.info("API Request")
-                response = requests.request("GET", url, headers=headers, data=payload)
-                logger.debug("Response: " + str(response.json()))
-                logger.info("API Response recieved")
-
-                movies_dict.append(response.json())
-                logger.debug("Dictionary is made: " + str(movies_dict))
-                logger.debug("Done getting page = " + str(i))
-                
-                i += 1
-                    
-            logger.info("makeNowPlayingMoviesDict end")
-            return movies_dict
-        
         # 指定したURLのHTMLを取得
         def get_html(url):
             response = requests.get(url)
