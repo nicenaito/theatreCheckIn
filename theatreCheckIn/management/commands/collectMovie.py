@@ -70,12 +70,32 @@ class Command(BaseCommand):
 
         # TODO: #1 DBへの登録処理を修正する
         for movie in movie_list:
+            
+            # Get the current movie information from DB
+            current_movie = Movies.objects.filter(movie_id=movie["movie_id"])
+            
+            # Register the movie information to DB
             register_movie = Movies(
             movie_id=movie["movie_id"],
             movie_title=movie["title"],
             pub_date=movie["pub_date"],
             description=movie["description"],
             )
+            
+            logger.info("The movie exists: " + str(current_movie.exists()))
+            
+            # If the movie information exists in DB and the description is the same, skip the registration
+            if current_movie.exists():
+                logger.debug("Specified movie id :" + current_movie[0].movie_id)
+                if current_movie[0].description == movie["description"]:
+                    logger.info("The movie has already been registered in DB. ID: " + movie["movie_id"] + " Title: " + movie["title"])
+                    continue
+                # If the movie information exists in DB and the description is different, update the updated_datetime
+                else:
+                    # Keep the created_datetime. updated_datetime will be updated to current time as default value.
+                    register_movie.created_datetime = current_movie[0].created_datetime
+                    logger.info("created_datetime is not changed and updated_datetime will be changed to current time. ")
+            
             register_movie.save()
             logger.info("The movie has been registered in DB. Title: " + movie["title"])
 
