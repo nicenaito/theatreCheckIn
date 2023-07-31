@@ -4,13 +4,10 @@ import uuid
 from django.utils import timezone
 
 class Movies(models.Model):
-    movie_id = models.IntegerField(primary_key=True, editable=False)
+    movie_id = models.CharField(primary_key=True, max_length=10, editable=False)
     movie_title = models.CharField(max_length=800, verbose_name='作品名')
     pub_date = models.DateField(verbose_name='公開日')
-    original_title = models.CharField(max_length=800, verbose_name='オリジナル作品名')
-    poster_path = models.TextField(null=True, verbose_name='ポスター画像パス')
-    original_language = models.CharField(max_length=2, verbose_name='オリジナル言語')
-    overview = models.TextField(null=True, verbose_name='あらすじ')
+    description = models.TextField(null=True, verbose_name='あらすじ')
     checkin_count = models.IntegerField(default=0, verbose_name='チェックイン回数')
     now_playing = models.BooleanField(default=True, verbose_name='公開中フラグ')
     created_datetime = models.DateTimeField(default=timezone.now, verbose_name='登録日時')
