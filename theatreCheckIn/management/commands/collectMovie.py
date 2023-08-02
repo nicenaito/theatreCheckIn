@@ -21,6 +21,7 @@ class Command(BaseCommand):
         # Logging 'collectMovie' start
         logger.info("collectMovie start")
         url = "https://www.cinematoday.jp/movie/release/"
+        logger.info("URL: " + url)
 
         # 今週の映画情報を取得
         html = upcoming_cine_scope.get_html(url)

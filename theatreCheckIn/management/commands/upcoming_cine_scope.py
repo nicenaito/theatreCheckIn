@@ -3,12 +3,15 @@ from bs4 import BeautifulSoup
 import re
 import datetime
 from datetime import date, timedelta
+import logging
 
+# Initializing logger
+logger = logging.getLogger(__name__)
 
 # 指定したURLのHTMLを取得
 def get_html(url):
     response = requests.get(url)
-    # print(response.text)
+    logger.debug("Response data: " + response.text)
     return response.text
 
 
@@ -22,6 +25,8 @@ def parse_movie_url(html):
     for movie in movies:
         # URLを絶対パスに変換し、リストに追加
         movie_url_list.append("https://www.cinematoday.jp/" + movie.attrs["href"])
+    
+    logger.debug("movie_url_list: " + str(movie_url_list))
     return movie_url_list
 
 
@@ -33,39 +38,31 @@ def parse_movie_detail(html, movie_url):
 
     # シネマトゥデイの映画IDを取得
     movie_id = movie_url.split("/")[-1]
-    # print(movie_id)
+    logger.debug("Movie id: " + movie_id)
     movie_dict["movie_id"] = movie_id
 
     # 作品名を取得
     title_tag = soup.find("h1", itemprop="name")
     title = title_tag.contents[0]
-    # print(title)
+    logger.debug("Movie title: " + title)
     movie_dict["title"] = title
 
     # 公開日を取得
     pub_date_tag = soup.find("span", class_="published")
-    # print(pub_date.contents[1])
     # YYYY年MM月DD日の形式からdatetime型に変換
     s_format = "%Y年%m月%d日"
     pub_date_str = pub_date_tag.contents[1].strip().replace("公開", "")
     pub_date = datetime.datetime.strptime(pub_date_str, s_format)
-    # print(pub_date)
+    logger.debug("Release date: " + str(pub_date))
     movie_dict["pub_date"] = pub_date
 
     # 映画のあらすじを取得
     description_tag = soup.find("p", itemprop="description")
     description = description_tag.contents[0]
-    # print(description)
+    logger.debug("Movie description: " + description)
     movie_dict["description"] = description
 
-    # TODO: #1 Implement getting movie summary
-    # summary_tag = soup.find_all("section","")
-    # print(summary_tag[1])
-
-    # print(movie_dict)
-
     return movie_dict
-
 
 # 　翌週月曜日の日付を取得
 def get_next_date(date):
@@ -76,7 +73,7 @@ def get_next_date(date):
     # dateに加算
     next_target_date = date + datetime.timedelta(days=add_days)
     next_target_date = next_target_date.strftime("%Y%m%d")
-    # print(next_target_date)
+    logger.debug("Next target date: " + str(next_target_date))
 
     return next_target_date
 
@@ -87,8 +84,7 @@ def check_url_alive(url):
     soup = BeautifulSoup(html, "html.parser")
     found_url = soup.find("meta", attrs={"property": "og:url"})
     current_url = found_url.get("content")
-    print(url)
-    # print(current_url)
+    logger.info("URL: " + url)
 
     # metaタグのURLと指定したURLが一致するかチェック
     # 一致する場合はTrueを返す
