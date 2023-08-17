@@ -4,7 +4,7 @@ import uuid
 from django.utils import timezone
 
 class Movies(models.Model):
-    movie_id = models.CharField(primary_key=True, max_length=10, editable=False)
+    movie_id = models.IntegerField(primary_key=True, max_length=10, editable=False)
     movie_title = models.CharField(max_length=800, verbose_name='作品名')
     pub_date = models.DateField(verbose_name='公開日')
     description = models.TextField(null=True, verbose_name='あらすじ')
