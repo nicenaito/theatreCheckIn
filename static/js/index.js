@@ -13,7 +13,6 @@ function initMap() {
         alert('位置情報の取得に失敗しました。エラーコード：' + error.code);
         lat = 35.689611;
         lng = 139.6983826;
-        var latlng = new google.maps.LatLng(35.6812405, 139.7649361); //東京駅
     }
     navigator.geolocation.getCurrentPosition(success, fail);
 }
@@ -28,50 +27,44 @@ function searchTheatre() {
         alert('位置情報の取得に失敗しました。エラーコード：' + error.code);
         lat = 35.689611;
         lng = 139.6983826;
-        var latlng = new google.maps.LatLng(35.6812405, 139.7649361); //東京駅
     }
     navigator.geolocation.getCurrentPosition(success, fail);
 
-    var sydney = new google.maps.LatLng(lat, lng);
+    const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization: ''
+        }
+      };
 
-    infowindow = new google.maps.InfoWindow();
-
-    map = new google.maps.Map(
-        document.getElementById('map'), { radius: 5000 });
-
-    var search_text = document.getElementById('id_search');
-
-    var request = {
-        query: search_text.value,
-        location: sydney,
-        radius: '5000',
-        type: 'movie_theater'
-    };
-
-    service = new google.maps.places.PlacesService(map);
-    service.textSearch(request, callback);
-
-    function callback(results, status) {
-        if (status == google.maps.places.PlacesServiceStatus.OK) {
-            // selectタグのID取得
-            var select = document.getElementById('id_theatre');
-            while (select.firstChild) {
-                select.removeChild(select.firstChild);
-            }
-            // removeChild(select);
-            for (var i = 0; i < results.length; i++) {
-                var place = results[i];
+    async function fetchData() {
+        const data = await fetch('https://api.foursquare.com/v3/places/search?categories=10024', options);
+        console.log(data);
+        const res = await data.json();
+        console.log(res.results.length);
+        console.log(res.results);
+        // selectタグのID取得
+        var select = document.getElementById('id_theatre');
+        while (select.firstChild) {
+            select.removeChild(select.firstChild);
+        }
+        for (var item in res.results){
+            console.log(res.results[item].name);
+            if (res.results.length >= 1) {
                 // option要素の宣言
                 var option = document.createElement('option');
                 // option要素のvalue属性に値をセット
-                option.setAttribute('value', results[i].name);
+                option.setAttribute('value', res.results[item].name);
                 // option要素に値をセット
-                option.innerHTML = results[i].name;
+                option.innerHTML = res.results[item].name;
                 // 作成したoption要素をselectタグに追加
                 select.appendChild(option);
                 console.log(select);
             }
         }
     }
+
+    fetchData()
 }
 window.searchTheatre = searchTheatre;
